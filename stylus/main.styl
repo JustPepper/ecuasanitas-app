@@ -3,6 +3,15 @@
 /* Colors */
 $blue = #0066cc
 
+body
+	font-family 'Raleway', sans-serif;
+
+.has-header
+	top 115px
+
+.has-tabs
+	bottom 163px
+	background-color #f4f4f4
 
 .header-nav
 	background-color $blue
@@ -65,6 +74,7 @@ $blue = #0066cc
 		a
 			text-decoration none
 			color white
+			display block
 			line-height 40px
 			font-family: 'Raleway', sans-serif
 
@@ -95,90 +105,9 @@ $blue = #0066cc
 		padding-left 12px
 		+placeholder()
 			color white
-
-
-/*	
-.nav-item
-	background-color #6699cc
-	display flex
-	flex-direction column
-	align-items center
-	justify-content center
-	size 100% 100px
-	font-family: 'Raleway', sans-serif
-	text-decoration none
-	font-size 16px
-	color white
-	border-bottom 1px solid white
-	img
-		display block
-		size 40px
-		margin-bottom 16px
-	+m('cian')
-		background-color #669999
-
-.sub-nav
-	background-color $blue
-	color white
-	display flex
-	align-items center
-	size 100% 50px
-	list-style none
-	li
-		size (100 / 3)% 100%
-		text-align center
-		line-height 50px
-		a
-			color white
-			font-family: 'Raleway', sans-serif
-			text-decoration none
-			font-size em(18px)
-			display block
-			size 100%
-
-
-.content-wrapper
-	padding 5%
-
-.title-with-border
-	padding 0 0 12px 0
-	display block
-	color $blue
-	font-family: 'Raleway', sans-serif
-	border-bottom 1px solid $blue
-
-.home-form
-	margin-top 20%
-	.list-inset
-		margin-left 0
-		margin-right 0
-		border-radius 0
-	.item  
-		size 100% 45px
-		border none
-		border-radius 0 !important
-		background-color #a5a5a5
-		margin-bottom em(16px)
-		&:after
-			color white
-		input
-		select
-			font-family: 'Raleway', sans-serif
-		input
-			color white
-			+placeholder()
-				color white
-	.item-select
-		//background-color red
-		select
-			background-color #a5a5a5
-			width 100%
-			max-width 100%
-			direction ltr
-			color white
 	
 
-/* Profile 
+/* Profile */
 .profile-header
 	background-color #6BA9AA
 	color white
@@ -193,7 +122,8 @@ $blue = #0066cc
 		display inline-block
 		img
 			size 100%
-			object-fit fill
+			object-fit cover
+			object-position center
 	.profile-name
 		font-size 16px
 		
@@ -209,6 +139,7 @@ $blue = #0066cc
 			&:first-child
 				color $blue
 				margin-right 12px
+				font-weight 600
 	.content-list
 		flex-direction column
 		li
@@ -216,9 +147,10 @@ $blue = #0066cc
 
 .profile-options
 	display flex
-	justify-content center
+	justify-content space-between
+	margin 22px auto
+	max-width 80%
 	button
-		margin 0 12px
 		background-color #6BA9AA
 		color white
 		border-radius 0
@@ -227,7 +159,8 @@ $blue = #0066cc
 		min-height 40px
 		font-size 14px
 		font-family 'Raleway', sans-serif
-
+		font-weight 300
+		letter-spacing 1px
 .small-title
 	color #669999
 	font-family 'Raleway', sans-serif
@@ -235,9 +168,56 @@ $blue = #0066cc
 	line-height 50px
 	text-align center
 
-.history
+
+/* Historial */
+
+.cian-title
+	color #6BA9AA
+	font-size 18px
+	display block
+	text-align center
+
+.doctor-list
+	margin 22px 0
+	display flex
+	flex-direction column
+	background-color white
+	box-shadow 0 1px 2px rgba(black, .2)
 	li
-		size 100% 50px
-		overflow hidden
-		
-*/
+		border-bottom 1px solid #D8D8D8
+		list-style none
+		&:last-child
+			border-bottom 0
+		a
+			text-decoration none
+			display flex
+			align-items center
+			padding 8px 12px 
+		.image
+			circle 66px
+			overflow hidden
+			border 2px solid #6BA9AA
+			img
+				width 100%
+				height 100%
+				object-fit cover
+		.content
+			display flex
+			flex-direction column
+			justify-content center
+			font-weight 600
+			color #4F4F4F
+			padding 12px
+			span
+				width 100%
+				display block
+				overflow hidden
+				white-space nowrap
+			  	
+	
+.profile-header-doctor
+	background-color #76B2E2
+	.address
+		font-size 14px
+		display block
+		margin-top 16px

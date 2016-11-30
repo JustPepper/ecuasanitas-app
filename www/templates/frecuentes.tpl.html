@@ -1,0 +1,18 @@
+<ion-view title="Dr Frecuentes">
+	<ion-content class="has-tabs">
+		<div class="wrapper">
+			<h1 class="cian-title">Dr. Frecuentes</h1>
+			<nav class="doctor-list">
+				<li ng-repeat="doctor in doctors">
+					<a ui-sref="app.doctor">
+						<div class="image"><img ng-src="{{ doctor.photo }}" alt=""></div>
+						<div class="content">
+							<span>{{ doctor.name }}</span>
+							<span>{{ doctor.job }}</span>
+						</div>
+					</a>
+				</li>
+			</nav>
+		</div>
+	</ion-content>
+</ion-view>

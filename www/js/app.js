@@ -31,20 +31,57 @@ angular.module('starter', [
   $ionicConfigProvider.tabs.position('bottom')
 
   $stateProvider
-    .state('tabs', {
-      url: "/tab",
+    .state('app', {
+      url: '/app',
       abstract: true,
-      templateUrl: "./templates/tabs.html"
+      templateUrl: 'templates/menu.html'
     })
-    .state('tabs.home', {
+    .state('app.home', {
       url: "/home",
       views: {
-        'home-tab': {
+        'menuContent': {
           templateUrl: "./templates/home.tpl.html"
         }
       }
     })
+    .state('app.profile', {
+      url: "/profile",
+      views: {
+        'menuContent': {
+          templateUrl: "./templates/profile.tpl.html"
+        }
+      }
+    })
+    .state('app.doctor', {
+      url: "/doctor",
+      views: {
+        'menuContent': {
+          templateUrl: "./templates/doctor-profile.tpl.html"
+        }
+      }
+    })
 
-   $urlRouterProvider.otherwise("/tab/home");
+    .state('app.frecuentes', {
+      url: "/frecuentes",
+      views: {
+        'menuContent': {
+          templateUrl: "./templates/frecuentes.tpl.html",
+          controller: "FrecuentesCtrl"
+        }
+      }
+    })
 
+
+   $urlRouterProvider.otherwise("/app/home");
+
+})
+
+.controller('FrecuentesCtrl', function($scope) {
+  $scope.doctors = [
+    {
+      name: 'Esteban Garcés Burbano',
+      job: 'Ortopedista - Traumatólogo',
+      photo: 'img/doctor.jpg'
+    }
+  ]
 })

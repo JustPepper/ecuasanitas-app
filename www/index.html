@@ -17,7 +17,7 @@
     </script>-->
     
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway%3A300%2C400%2C600" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
@@ -38,39 +38,6 @@
   </head>
 
   <body ng-app="starter">
-    <ion-side-menus>
-      <ion-side-menu-content>
-        <ion-nav-view animation="slide-left-right"></ion-nav-view>
-      </ion-side-menu-content> 
-      <ion-side-menu side="right" width="200">
-        <ion-content>
-          <ul class="list app-list">
-            <li>
-              <a class="item" menu-close="" nav-clear="" href="#/search">
-                <img src="img/recetas.svg" alt="">
-                Mis recetas
-              </a>
-            </li>
-            <li>
-              <a class="item" menu-close="" nav-clear="" href="#/search">
-                <img src="img/historial.svg" alt="">
-                Mis historial
-              </a>
-            </li>
-            <li>
-              <a class="item" menu-close="" nav-clear="" href="#/search">
-                <img src="img/ecuasanitas-iso.svg" alt="">
-                Ecuasanitas
-              </a>
-            </li>
-            <li>
-              <a class="item cian" menu-close="" nav-clear="" href="#/search">
-                Cerrar sesión
-              </a>
-            </li>
-          </ul>
-        </ion-content>
-      </ion-side-menu>
-    </ion-side-menus>
+    <ion-nav-view></ion-nav-view>
   </body>
 </html>

@@ -1,4 +1,14 @@
 /* Colors */
+body {
+  font-family: 'Raleway', sans-serif;
+}
+.has-header {
+  top: 115px;
+}
+.has-tabs {
+  bottom: 163px;
+  background-color: #f4f4f4;
+}
 .header-nav {
   background-color: #06c;
   width: 100%;
@@ -88,6 +98,7 @@
 .app-top-nav li a {
   text-decoration: none;
   color: #fff;
+  display: block;
   line-height: 40px;
   font-family: 'Raleway', sans-serif;
 }
@@ -137,147 +148,162 @@
 .app-form select:-ms-input-placeholder {
   color: #fff;
 }
-/*	
-.nav-item
-	background-color #6699cc
-	display flex
-	flex-direction column
-	align-items center
-	justify-content center
-	size 100% 100px
-	font-family: 'Raleway', sans-serif
-	text-decoration none
-	font-size 16px
-	color white
-	border-bottom 1px solid white
-	img
-		display block
-		size 40px
-		margin-bottom 16px
-	+m('cian')
-		background-color #669999
-
-.sub-nav
-	background-color $blue
-	color white
-	display flex
-	align-items center
-	size 100% 50px
-	list-style none
-	li
-		size (100 / 3)% 100%
-		text-align center
-		line-height 50px
-		a
-			color white
-			font-family: 'Raleway', sans-serif
-			text-decoration none
-			font-size em(18px)
-			display block
-			size 100%
-
-
-.content-wrapper
-	padding 5%
-
-.title-with-border
-	padding 0 0 12px 0
-	display block
-	color $blue
-	font-family: 'Raleway', sans-serif
-	border-bottom 1px solid $blue
-
-.home-form
-	margin-top 20%
-	.list-inset
-		margin-left 0
-		margin-right 0
-		border-radius 0
-	.item  
-		size 100% 45px
-		border none
-		border-radius 0 !important
-		background-color #a5a5a5
-		margin-bottom em(16px)
-		&:after
-			color white
-		input
-		select
-			font-family: 'Raleway', sans-serif
-		input
-			color white
-			+placeholder()
-				color white
-	.item-select
-		//background-color red
-		select
-			background-color #a5a5a5
-			width 100%
-			max-width 100%
-			direction ltr
-			color white
-	
-
-/* Profile 
-.profile-header
-	background-color #6BA9AA
-	color white
-	font-family: 'Raleway', sans-serif
-	text-align center
-	padding 20px 0 
-	.profile-picture
-		circle 110px
-		border 2px solid white
-		background-color white
-		overflow hidden
-		display inline-block
-		img
-			size 100%
-			object-fit fill
-	.profile-name
-		font-size 16px
-		
-.profile-content
-	background-color white
-	max-width 80%
-	margin -10px auto 0
-	box-shadow 0 1px 2px rgba(black, .2)
-	color #4F4F4F
-	.row
-		padding 12px
-		span
-			&:first-child
-				color $blue
-				margin-right 12px
-	.content-list
-		flex-direction column
-		li
-			line-height 40px
-
-.profile-options
-	display flex
-	justify-content center
-	button
-		margin 0 12px
-		background-color #6BA9AA
-		color white
-		border-radius 0
-		height 40px
-		line-height 40px
-		min-height 40px
-		font-size 14px
-		font-family 'Raleway', sans-serif
-
-.small-title
-	color #669999
-	font-family 'Raleway', sans-serif
-	font-size em(22px)
-	line-height 50px
-	text-align center
-
-.history
-	li
-		size 100% 50px
-		overflow hidden
-		
-*/
+/* Profile */
+.profile-header {
+  background-color: #6ba9aa;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  padding: 20px 0;
+}
+.profile-header .profile-picture {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: #fff;
+  overflow: hidden;
+  display: inline-block;
+}
+.profile-header .profile-picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.profile-header .profile-name {
+  font-size: 16px;
+}
+.profile-content {
+  background-color: #fff;
+  max-width: 80%;
+  margin: -10px auto 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  color: #4f4f4f;
+}
+.profile-content .row {
+  padding: 12px;
+}
+.profile-content .row span:first-child {
+  color: #06c;
+  margin-right: 12px;
+  font-weight: 600;
+}
+.profile-content .content-list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.profile-content .content-list li {
+  line-height: 40px;
+}
+.profile-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 22px auto;
+  max-width: 80%;
+}
+.profile-options button {
+  background-color: #6ba9aa;
+  color: #fff;
+  border-radius: 0;
+  height: 40px;
+  line-height: 40px;
+  min-height: 40px;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.small-title {
+  color: #699;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.375em;
+  line-height: 50px;
+  text-align: center;
+}
+/* Historial */
+.cian-title {
+  color: #6ba9aa;
+  font-size: 18px;
+  display: block;
+  text-align: center;
+}
+.doctor-list {
+  margin: 22px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+.doctor-list li {
+  border-bottom: 1px solid #d8d8d8;
+  list-style: none;
+}
+.doctor-list li:last-child {
+  border-bottom: 0;
+}
+.doctor-list li a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 12px;
+}
+.doctor-list li .image {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #6ba9aa;
+}
+.doctor-list li .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.doctor-list li .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  color: #4f4f4f;
+  padding: 12px;
+}
+.doctor-list li .content span {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.profile-header-doctor {
+  background-color: #76b2e2;
+}
+.profile-header-doctor .address {
+  font-size: 14px;
+  display: block;
+  margin-top: 16px;
+}
