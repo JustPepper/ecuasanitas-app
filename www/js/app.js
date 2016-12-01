@@ -56,7 +56,8 @@ angular.module('starter', [
       url: "/doctor",
       views: {
         'menuContent': {
-          templateUrl: "./templates/doctor-profile.tpl.html"
+          templateUrl: "./templates/doctor-profile.tpl.html",
+          controller: 'DoctorCtrl'
         }
       }
     })
@@ -84,4 +85,15 @@ angular.module('starter', [
       photo: 'img/doctor.jpg'
     }
   ]
+})
+
+.controller('DoctorCtrl', function($scope) {
+  console.log('on doctor profile');
+  $scope.tab = 1;
+   $scope.setTab = function(newTab){
+      $scope.tab = newTab;
+    };
+  $scope.isSet = function(tabNum) {
+    return $scope.tab === tabNum;
+  }
 })

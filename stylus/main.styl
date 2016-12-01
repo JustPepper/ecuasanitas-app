@@ -126,6 +126,8 @@ body
 			object-position center
 	.profile-name
 		font-size 16px
+		span
+			padding 0 12px
 		
 .profile-content
 	background-color white
@@ -211,9 +213,9 @@ body
 			span
 				width 100%
 				display block
-				overflow hidden
-				white-space nowrap
 			  	
+
+/* Doctor */
 	
 .profile-header-doctor
 	background-color #76B2E2
@@ -221,3 +223,59 @@ body
 		font-size 14px
 		display block
 		margin-top 16px
+
+.doctor-nav
+	max-width 90%
+	margin -5% auto 
+	background-color white
+	z-index 9999
+	box-shadow 0 1px 2px rgba(black, .2)
+	ul
+		display flex
+		li
+			a
+				display flex
+				text-decoration none
+				color #76B2E2
+				font-size 10px
+				padding 12px
+				line-height 1.5
+				img
+					margin-right 8px
+
+.doctor-tabs
+	position relative
+	padding 12px 5%
+	z-index -1
+	height auto
+	top -22px
+	.call-icon
+		margin-top 40px
+		line-height 30px
+		font-weight 600
+		img
+			margin-right 12px
+		display block
+		border-bottom 1px solid #D8D8D8
+
+.call-list
+	li
+		display flex
+		justify-content space-between
+		align-items center
+		size 100% 44px
+		border-bottom 1px solid #D8D8D8
+		a
+			text-decoration none
+			color #6BA9AA
+			font-style italic
+.activeNav
+	background-color rgba(#76B2E2, .2)
+.map
+	size 100% 350px
+	position absolute
+	top 0
+	left 0
+	iframe
+		size 100%
+		z-index -1

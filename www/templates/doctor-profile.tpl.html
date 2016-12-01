@@ -9,26 +9,40 @@
     		<span class="address">Dirección: Av. Mariana de Jesús OE-8 y Ocidental</span>
     	</div>
     </div>
-    <div class="profile-content">
-		<div class="row">
-			<span>Plan:</span>
-			<span>Ecuasanitas Total</span>
-		</div>
-		<div class="row">
-			<span>Email:</span>
-			<span>fernandagonza@gmail.com</span>
-		</div>
-		<div class="row content-list">
-			<span>Enfermedades persitentes:</span>
-			<ul>
-				<li>Miopía</li>
-				<li>Rinitis</li>
+    <div class="doctor-nav">
+    	<ul>
+    		<li><a href="" ng-click="setTab(2)" ng-class="{ activeNav: isSet(2) }">
+    			<img src="img/d-place.svg" alt="">
+    			<span>Como llegar</span>
+    		</a></li>
+    		<li><a href="" ng-click="setTab(3)" ng-class="{ activeNav: isSet(3) }">
+    			<img src="img/appointment.svg" alt="">
+    			<span>Registrar cita</span>
+    		</a></li>
+    		<li><a href="">
+    			<img src="img/d-tool.svg" alt="">
+    			<span>Agregar a Dr. Frecuentes</span>
+    		</a></li>
+    	</ul>
+    </div>
+
+	<div class="doctor-tabs">
+		<div class="doctor-tab" ng-show="isSet(1)">
+			<span class="call-icon">
+				<img src="img/call.svg" alt="">
+				Llamar
+			</span>
+			<ul class="call-list">
+				<li><span>098 277 6011</span><a href="tel:098 277 6011">Llamar</a></li>
+				<li><span>(042) 2 834 766</span><a href="tel:(042) 2 834 766">Llamar</a></li>
 			</ul>
 		</div>
+		<div class="doctor-tab" ng-show="isSet(2)">
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.958708235402!2d-79.90029308582916!3d-2.1694046984186914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d954eaea557%3A0x3e260b5088f0f25b!2sSan+Marino+Shopping!5e0!3m2!1ses!2sec!4v1480612551458" frameborder="0" style="border:0"></iframe>
+			</div>
+		</div>
 	</div>
-	<div class="profile-options">
-		<button class="button">Editar Perfil</button>
-		<button class="button">Cerrar sesión</button>
-	</div>
+
   </ion-content>
 </ion-view>
