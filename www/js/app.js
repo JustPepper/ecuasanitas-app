@@ -1,6 +1,7 @@
 angular.module('starter', [
   'ionic',
   'ngCordova',
+  'satellizer',
   'starter.directives',
   'starter.controllers'
 ])
@@ -25,10 +26,11 @@ angular.module('starter', [
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
-
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider, $authProvider) {
 
   $ionicConfigProvider.tabs.position('bottom')
+
+  $authProvider.loginUrl = 'http://ecuasanitas.dev/api/authenticate';
 
   $stateProvider
     .state('app', {
@@ -36,11 +38,17 @@ angular.module('starter', [
       abstract: true,
       templateUrl: 'templates/menu.html'
     })
+    .state('login', {
+        url: "/login",
+        templateUrl: "templates/login.tpl.html",
+        controller: "AuthController as auth"
+    })
     .state('app.home', {
       url: "/home",
       views: {
         'menuContent': {
-          templateUrl: "./templates/home.tpl.html"
+          templateUrl: "./templates/home.tpl.html",
+          controller: "HomeCtrl"
         }
       }
     })
@@ -70,6 +78,15 @@ angular.module('starter', [
           controller: "FrecuentesCtrl"
         }
       }
+    })
+
+    .state('app.recipes', {
+        url:"/recipes",
+        views: {
+            'menuContent': {
+                templateUrl: "./templates/recipes.tpl.html"
+            }
+        }
     })
 
 

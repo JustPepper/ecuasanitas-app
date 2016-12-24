@@ -1,27 +1,29 @@
 <ion-view>
   <ion-content class="has-tabs">
     <div class="profile-header profile-header-doctor">
-    	<div class="profile-picture"><img src="img/doctor.jpg" alt=""></div>
+    	<div class="profile-picture" style="background-image:url('img/doctor.jpg')">
+            <button class="button icon ion-android-favorite add-to-favorites add-to-favorites-active"></button>
+        </div>
     	<div class="profile-name">
     		Dr. Esteban Garcés Burbano
     		<br>
     		Ortopedista - Traumatólogo
     		<span class="address">Dirección: Av. Mariana de Jesús OE-8 y Ocidental</span>
-    	</div>
+        </div>
     </div>
     <div class="doctor-nav">
-    	<ul>
-    		<li><a href="" ng-click="setTab(2)" ng-class="{ activeNav: isSet(2) }">
+    	<ul class="row">
+            <li class="col" ng-class="{ activeNav: isSet(1) }"><a href="" ng-click="setTab(1)">
+    			<img src="img/call.svg" alt="">
+    			<span>Información</span>
+    		</a></li>
+    		<li class="col" ng-class="{ activeNav: isSet(2) }"><a href="" ng-click="setTab(2)">
     			<img src="img/d-place.svg" alt="">
-    			<span>Como llegar</span>
+    			<span>Mapa</span>
     		</a></li>
-    		<li><a href="" ng-click="setTab(3)" ng-class="{ activeNav: isSet(3) }">
+    		<li class="col" ng-class="{ activeNav: isSet(3) }"><a href="" ng-click="setTab(3)" >
     			<img src="img/appointment.svg" alt="">
-    			<span>Registrar cita</span>
-    		</a></li>
-    		<li><a href="">
-    			<img src="img/d-tool.svg" alt="">
-    			<span>Agregar a Dr. Frecuentes</span>
+    			<span>Cita</span>
     		</a></li>
     	</ul>
     </div>

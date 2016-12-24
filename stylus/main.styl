@@ -6,6 +6,9 @@ $blue = #0066cc
 body
 	font-family 'Raleway', sans-serif;
 
+/* Import comonents */
+@import 'components/*'
+
 .has-header
 	top 115px
 
@@ -105,7 +108,7 @@ body
 		padding-left 12px
 		+placeholder()
 			color white
-	
+
 
 /* Profile */
 .profile-header
@@ -113,22 +116,20 @@ body
 	color white
 	font-family: 'Raleway', sans-serif
 	text-align center
-	padding 20px 0 
+	padding 20px 0
 	.profile-picture
 		circle 110px
 		border 2px solid white
 		background-color white
-		overflow hidden
 		display inline-block
-		img
-			size 100%
-			object-fit cover
-			object-position center
+		position relative
+		background-size cover
+		background-position center
 	.profile-name
 		font-size 16px
 		span
 			padding 0 12px
-		
+
 .profile-content
 	background-color white
 	max-width 80%
@@ -194,15 +195,14 @@ body
 			text-decoration none
 			display flex
 			align-items center
-			padding 8px 12px 
+			padding 8px 12px
 		.image
 			circle 66px
 			overflow hidden
 			border 2px solid #6BA9AA
 			img
-				width 100%
+				width auto
 				height 100%
-				object-fit cover
 		.content
 			display flex
 			flex-direction column
@@ -213,10 +213,10 @@ body
 			span
 				width 100%
 				display block
-			  	
+
 
 /* Doctor */
-	
+
 .profile-header-doctor
 	background-color #76B2E2
 	.address
@@ -225,21 +225,28 @@ body
 		margin-top 16px
 
 .doctor-nav
-	max-width 90%
-	margin -5% auto 
+	max-width 350px
+	size 100% 50px
+	margin -15px auto
 	background-color white
 	z-index 9999
 	box-shadow 0 1px 2px rgba(black, .2)
 	ul
-		display flex
+		size 100%
+		padding 0
 		li
+			display flex
+			justify-content center
+			align-items center
+			align-content center
 			a
-				display flex
 				text-decoration none
 				color #76B2E2
 				font-size 10px
-				padding 12px
-				line-height 1.5
+				display flex
+				justify-content center
+				align-items center
+				align-content center
 				img
 					margin-right 8px
 

@@ -34,7 +34,25 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('HomeCtrl', function($scope) {
-  console.log('in home view');
+.controller('HomeCtrl', function($scope, $http) {
+    console.log('on home view');
+    $http.get('http://ecuasanitas.dev/api/doctors').then(function(response) {
+      alert('lol');
+    })
 })
-  
+
+.controller('AuthController', function($auth, $state) {
+
+    var vm = this;
+
+    vm.login = function() {
+        var credentials = {
+            email: vm.email,
+            password: vm.password
+        }
+        $auth.login(credentials).then(function(data) {
+            $state.go('app.home');
+        })
+    }
+
+})

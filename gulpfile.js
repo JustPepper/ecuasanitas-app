@@ -29,7 +29,9 @@ gulp.task('stylus', function(done) {
 
 gulp.task('prefix', function() {
   gulp.src('./www/css/main.css')
-    .pipe(prefix())
+    .pipe(prefix({
+        browsers: ['last 4 version']
+    }))
     .pipe(gulp.dest('./www/css/'))
 });
 
